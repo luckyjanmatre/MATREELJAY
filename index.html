@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --primary: #2563eb;
-            --secondary: #1e293b;
-            --card: #ffffff;
+            --dark: #1e293b;
+            --light-bg: #eef6ff;
+            --card-bg: #ffffff;
             --text: #334155;
-            --hover-blue: #e0f2ff;
-            --page-bg: linear-gradient(180deg, #eaf4ff, #f8fbff);
         }
 
         * {
@@ -25,9 +24,9 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: var(--page-bg);
+            background: var(--light-bg);
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         a {
@@ -35,169 +34,109 @@
             text-decoration: none;
         }
 
-        /* ===== HEADER ===== */
+        /* HEADER */
         header {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
+            background: var(--primary);
             color: #fff;
-            padding: 70px 10% 50px;
             text-align: center;
+            padding: 50px 20px;
         }
 
-        header h1,
-        header p,
-        nav a {
-            padding: 6px 12px;
-            border-radius: 8px;
-            display: inline-block;
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
         }
 
-        header h1:hover,
-        header p:hover,
-        nav a:hover {
-            background: var(--hover-blue);
-            color: #1e40af;
-            transition: 0.3s;
-        }
-
-        nav {
-            margin-top: 25px;
+        header p {
+            margin: 10px 0 20px;
+            font-size: 1rem;
         }
 
         nav a {
             margin: 0 12px;
             font-weight: 500;
-            color: #e0e7ff;
+            color: #fff;
         }
 
-        /* ===== SECTIONS ===== */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTIONS */
         section {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 40px auto;
-            padding: 60px 10%;
-            border-radius: 24px;
-            transition: background 0.3s ease;
-        }
-
-        section:hover {
-            background: rgba(224, 242, 255, 0.6);
+            padding: 0 20px;
         }
 
         section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: var(--dark);
         }
 
-        section h2:hover {
-            background: var(--hover-blue);
-        }
-
-        section h2::after {
-            content: "";
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            border-radius: 5px;
-        }
-
-        /* ===== CARD ===== */
+        /* CARD */
         .card {
-            background: var(--card);
+            background: var(--card-bg);
             padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .card + .card {
+            margin-top: 20px;
         }
 
         .card:hover {
-            background: var(--hover-blue);
-            transform: translateY(-6px);
-            box-shadow: 0 25px 50px rgba(37,99,235,0.25);
+            box-shadow: 0 12px 28px rgba(37,99,235,0.2);
         }
 
-        /* ===== TEXT HOVER ===== */
-        p, h3, li {
-            padding: 6px 10px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        p:hover,
-        h3:hover,
-        li:hover {
-            background: var(--hover-blue);
-        }
-
-        /* ===== SKILLS ===== */
+        /* SKILLS */
         .skills ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            padding: 0;
+            gap: 10px;
             list-style: none;
+            padding: 0;
         }
 
         .skills li {
-            background: #e0e7ff;
+            background: #dbeafe;
             color: #1e40af;
-            padding: 10px 18px;
-            border-radius: 999px;
+            padding: 8px 14px;
+            border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
         }
 
-        .skills li:hover {
-            background: var(--primary);
-            color: #fff;
-            transform: scale(1.1);
-        }
-
-        /* ===== PROJECT LINKS ===== */
+        /* PROJECT LINKS */
         .project a {
             display: inline-block;
             margin-top: 10px;
-            padding: 8px 14px;
-            border-radius: 8px;
+            font-weight: 500;
         }
 
-        .project a:hover {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        /* ===== FOOTER ===== */
+        /* FOOTER */
         footer {
-            background: var(--secondary);
+            background: var(--dark);
             color: #cbd5f5;
             text-align: center;
-            padding: 30px 10%;
+            padding: 20px;
             margin-top: 60px;
         }
 
-        footer p,
         footer a {
-            padding: 6px 10px;
-            border-radius: 8px;
+            color: #cbd5f5;
+            margin: 0 8px;
         }
 
-        footer p:hover,
         footer a:hover {
-            background: var(--hover-blue);
-            color: #1e40af;
+            color: #fff;
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            section {
-                padding: 50px 6%;
+            header h1 {
+                font-size: 1.8rem;
             }
 
             nav a {
@@ -228,7 +167,7 @@
     <div class="card">
         <p>
             I am an IT student passionate about web development and modern technologies.
-            I enjoy building clean, responsive interfaces and solving real-world problems.
+            I enjoy building clean and responsive websites and continuously improving my skills.
         </p>
     </div>
 </section>
@@ -237,8 +176,8 @@
     <h2>Skills</h2>
     <div class="card">
         <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
+            <li>HTML</li>
+            <li>CSS</li>
             <li>JavaScript</li>
             <li>Python</li>
             <li>Git & GitHub</li>
@@ -253,14 +192,14 @@
 
     <div class="card project">
         <h3>Portfolio Website</h3>
-        <p>A responsive portfolio website showcasing my skills and projects.</p>
-        <a href="#">View on GitHub →</a>
+        <p>A personal portfolio website built using HTML and CSS.</p>
+        <a href="#">View on GitHub</a>
     </div>
 
     <div class="card project">
         <h3>Real-Time Chat App</h3>
-        <p>A real-time chat application using Node.js and Socket.io.</p>
-        <a href="#">View on GitHub →</a>
+        <p>A chat application developed using Node.js and Socket.io.</p>
+        <a href="#">View on GitHub</a>
     </div>
 </section>
 
@@ -279,7 +218,7 @@
     <h2>Extracurricular Activities</h2>
     <div class="card">
         <ul>
-            <li>Member of Coding Club – Hackathon Organizer</li>
+            <li>Member of Coding Club</li>
             <li>IT Support Volunteer</li>
             <li>Programming Competition Participant</li>
         </ul>
@@ -289,9 +228,9 @@
 <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/username</p>
+        <p>Email: ljmatre15@gmail.com</p>
+        <p>Facebook: Lj Matre</p>
+        <p>Instagram: eljaymx</p>
     </div>
 </section>
 
