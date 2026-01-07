@@ -51,10 +51,15 @@
             font-size: 2.2rem;
         }
 
+        header p {
+            margin: 10px 0 20px;
+            font-size: 1rem;
+        }
+
         nav a {
             margin: 0 12px;
-            color: #fff;
             font-weight: 500;
+            color: #fff;
         }
 
         /* SECTIONS */
@@ -65,6 +70,7 @@
         }
 
         section h2 {
+            margin-bottom: 15px;
             font-size: 1.8rem;
             color: var(--dark);
         }
@@ -75,30 +81,29 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+            transition: box-shadow 0.3s ease;
         }
 
-        .clickable-card {
-            cursor: pointer;
+        .card + .card {
+            margin-top: 25px;
         }
 
-        .clickable-card:hover {
+        .card:hover {
             box-shadow: 0 12px 28px rgba(139, 92, 246, 0.25);
-            transform: translateY(-4px);
         }
 
-        /* BUTTON */
-        .button {
+        /* PROJECT */
+        .project a.button {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 16px;
+            padding: 8px 14px;
             background: var(--primary);
             color: #fff;
             border-radius: 6px;
             font-weight: 500;
         }
 
-        .button:hover {
+        .project a.button:hover {
             background: #6d28d9;
             text-decoration: none;
         }
@@ -129,9 +134,15 @@
             margin-top: 60px;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
             }
         }
     </style>
@@ -146,6 +157,8 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#activities">Activities</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -155,8 +168,10 @@
     <div class="card">
         <p>
             I am Lucky Jan S. Matre, a second-year Bachelor of Science in Information Technology
-            student specializing in Game Development. I am passionate about web development
-            and improving my technical skills while working independently or in a team.
+            student specializing in Game Development. I am enthusiastic about learning web
+            development and improving my technical skills. I enjoy expanding my knowledge
+            in technology and staying active through cycling, gym workouts, and basketball.
+            I am outgoing, cooperative, and comfortable working independently or as part of a team.
         </p>
     </div>
 </section>
@@ -179,35 +194,51 @@
 <section id="projects">
     <h2>Projects</h2>
 
-    <!-- ENTIRE CARD CLICKABLE -->
-    <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
-        <div class="card clickable-card project">
-            <h3>Personal IT Portfolio Website</h3>
+    <div class="card project">
+        <h3>Personal IT Portfolio Website</h3>
 
-            <p>
-                A personal IT portfolio website created to showcase my background, technical
-                skills, projects, certifications, and contact information in a modern layout.
-            </p>
+        <p>
+            This project is a personal IT portfolio website developed to showcase my background,
+            technical skills, projects, certifications, and contact information in a clean
+            and professional layout.
+        </p>
 
-            <p>
-                Designed with a light purple theme and responsive layout to ensure accessibility
-                across devices.
-            </p>
+        <p>
+            The website uses a light purple theme and responsive design principles to ensure
+            accessibility across different devices. It serves as a digital resume that reflects
+            my growth as an aspiring web developer and IT student.
+        </p>
 
-            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+        <p>
+            <strong>Technologies Used:</strong> HTML, CSS, JavaScript
+        </p>
 
-            <!-- CLEAR BUTTON -->
-            <span class="button">View Live Project</span>
+        <a class="button" href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
+            View Live Project
+        </a>
+    </div>
+</section>
 
-            <!-- VISIBLE LINK -->
-            <p style="margin-top:10px; font-size:0.9rem;">
-                🔗 Live URL:
-                <strong>
-                    https://luckyjanmatre.github.io/FinalProject_Portfolioo/
-                </strong>
-            </p>
-        </div>
-    </a>
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+        <ul>
+            <li>Google IT Support Professional Certificate</li>
+            <li>Web Development Bootcamp – Coursera</li>
+            <li>AWS Cloud Practitioner</li>
+        </ul>
+    </div>
+</section>
+
+<section id="activities">
+    <h2>Extracurricular Activities</h2>
+    <div class="card">
+        <ul>
+            <li>Member of Coding Club</li>
+            <li>IT Support Volunteer</li>
+            <li>Programming Competition Participant</li>
+        </ul>
+    </div>
 </section>
 
 <section id="contact">
