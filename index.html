@@ -10,9 +10,9 @@
 
     <style>
         :root {
-            --primary: #8b5cf6;
-            --dark: #4c1d95;
-            --light-bg: #f5f3ff;
+            --primary: #8b5cf6;     /* Light Purple */
+            --dark: #4c1d95;        /* Deep Purple */
+            --light-bg: #f5f3ff;    /* Light Lavender */
             --card-bg: #ffffff;
             --text: #4b5563;
         }
@@ -92,10 +92,21 @@
             box-shadow: 0 12px 28px rgba(139, 92, 246, 0.25);
         }
 
-        /* PROJECT */
+        /* PROJECT IMAGE */
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .project img:hover {
+            transform: scale(1.03);
+        }
+
         .project a.button {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 10px;
             padding: 8px 14px;
             background: var(--primary);
             color: #fff;
@@ -134,6 +145,15 @@
             margin-top: 60px;
         }
 
+        footer a {
+            color: #e9d5ff;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             header h1 {
@@ -167,11 +187,11 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am Lucky Jan S. Matre, a second-year Bachelor of Science in Information Technology
-            student specializing in Game Development. I am enthusiastic about learning web
-            development and improving my technical skills. I enjoy expanding my knowledge
-            in technology and staying active through cycling, gym workouts, and basketball.
-            I am outgoing, cooperative, and comfortable working independently or as part of a team.
+            I am Lucky Jan S. Matre, a second-year Bachelor of Science in Information Technology student
+            specializing in Game Development. I am enthusiastic about learning web development and
+            improving my technical skills. I enjoy expanding my knowledge in technology and staying
+            active through cycling, gym workouts, and basketball. I am outgoing, cooperative, and
+            comfortable working independently or in a team.
         </p>
     </div>
 </section>
@@ -195,22 +215,14 @@
     <h2>Projects</h2>
 
     <div class="card project">
-        <h3>Personal IT Portfolio Website</h3>
+        <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
+            <img src="https://via.placeholder.com/900x450?text=Portfolio+Project+Preview" alt="Portfolio Project Preview">
+        </a>
 
+        <h3>Final Portfolio Project</h3>
         <p>
-            This project is a personal IT portfolio website developed to showcase my background,
-            technical skills, projects, certifications, and contact information in a clean
-            and professional layout.
-        </p>
-
-        <p>
-            The website uses a light purple theme and responsive design principles to ensure
-            accessibility across different devices. It serves as a digital resume that reflects
-            my growth as an aspiring web developer and IT student.
-        </p>
-
-        <p>
-            <strong>Technologies Used:</strong> HTML, CSS, JavaScript
+            A complete portfolio website showcasing my skills, projects, and contact information.
+            Built using HTML, CSS, and JavaScript.
         </p>
 
         <a class="button" href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
@@ -244,9 +256,24 @@
 <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-        <p>📧 Email: <a href="mailto:ljmatre15@gmail.com">ljmatre15@gmail.com</a></p>
-        <p>📘 Facebook: <a href="https://web.facebook.com/lj.matre.73" target="_blank">Lj Matre</a></p>
-        <p>📸 Instagram: <a href="https://www.instagram.com/eljaymx/" target="_blank">@eljaymx</a></p>
+        <p>
+            📧 Email:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ljmatre15@gmail.com" target="_blank">
+                ljmatre15@gmail.com
+            </a>
+        </p>
+        <p>
+            📘 Facebook:
+            <a href="https://web.facebook.com/lj.matre.73" target="_blank">
+                Lj Matre
+            </a>
+        </p>
+        <p>
+            📸 Instagram:
+            <a href="https://www.instagram.com/eljaymx/" target="_blank">
+                @eljaymx
+            </a>
+        </p>
     </div>
 </section>
 
