@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -79,42 +79,49 @@
         .card {
             background: var(--card-bg);
             padding: 25px;
-            border-radius: 12px;
+            border-radius: 14px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .card + .card {
-            margin-top: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            box-shadow: 0 12px 28px rgba(139, 92, 246, 0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(139, 92, 246, 0.35);
         }
 
-        /* PROJECT IMAGE */
+        /* PROJECT CARD */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
         .project img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
-            transition: transform 0.3s ease;
         }
 
-        .project img:hover {
-            transform: scale(1.03);
+        .project h3 {
+            margin-top: 0;
+            color: var(--dark);
         }
 
-        .project a.button {
+        .project p {
+            font-size: 0.95rem;
+        }
+
+        .project .button {
             display: inline-block;
-            margin-top: 10px;
-            padding: 8px 14px;
+            margin-top: 12px;
+            padding: 10px 16px;
             background: var(--primary);
             color: #fff;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 500;
         }
 
-        .project a.button:hover {
+        .project .button:hover {
             background: #6d28d9;
             text-decoration: none;
         }
@@ -147,22 +154,11 @@
 
         footer a {
             color: #e9d5ff;
-            margin: 0 8px;
         }
 
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 8px;
             }
         }
     </style>
@@ -177,8 +173,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#activities">Activities</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -187,11 +181,8 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am Lucky Jan S. Matre, a second-year Bachelor of Science in Information Technology student
-            specializing in Game Development. I am enthusiastic about learning web development and
-            improving my technical skills. I enjoy expanding my knowledge in technology and staying
-            active through cycling, gym workouts, and basketball. I am outgoing, cooperative, and
-            comfortable working independently or in a team.
+            I am Lucky Jan S. Matre, a second-year BSIT student specializing in Game Development.
+            I am passionate about web development and continuously improving my technical skills.
         </p>
     </div>
 </section>
@@ -211,76 +202,19 @@
     </div>
 </section>
 
+<!-- PROJECTS SECTION -->
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card project">
-        <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
-            <img src="https://via.placeholder.com/900x450?text=Portfolio+Project+Preview" alt="Portfolio Project Preview">
-        </a>
+    <div class="projects-grid">
 
-        <h3>Final Portfolio Project</h3>
-        <p>
-            A complete portfolio website showcasing my skills, projects, and contact information.
-            Built using HTML, CSS, and JavaScript.
-        </p>
-
-        <a class="button" href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
-            View Live Project
-        </a>
-    </div>
-
-</section>
-
-<section id="certifications">
-    <h2>Certifications</h2>
-    <div class="card">
-        <ul>
-            <li>Google IT Support Professional Certificate</li>
-            <li>Web Development Bootcamp – Coursera</li>
-            <li>AWS Cloud Practitioner</li>
-        </ul>
-    </div>
-</section>
-
-<section id="activities">
-    <h2>Extracurricular Activities</h2>
-    <div class="card">
-        <ul>
-            <li>Member of Coding Club</li>
-            <li>IT Support Volunteer</li>
-            <li>Programming Competition Participant</li>
-        </ul>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-        <p>
-            📧 Email:
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ljmatre15@gmail.com" target="_blank">
-                ljmatre15@gmail.com
+        <!-- PORTFOLIO PROJECT CARD -->
+        <div class="card project">
+            <a href="https://luckyjanmatre.github.io/portfolio/" target="_blank">
+                <img src="https://via.placeholder.com/600x350?text=Personal+Portfolio" alt="Portfolio Website">
             </a>
-        </p>
-        <p>
-            📘 Facebook:
-            <a href="https://web.facebook.com/lj.matre.73" target="_blank">
-                Lj Matre
-            </a>
-        </p>
-        <p>
-            📸 Instagram:
-            <a href="https://www.instagram.com/eljaymx/" target="_blank">
-                @eljaymx
-            </a>
-        </p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Lucky Jan Matre. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                A modern and responsive portfolio showcasing my skills, projects, and contact
+                information. Built using HTML and CSS and deployed via GitHub Pages.
+            </p>
