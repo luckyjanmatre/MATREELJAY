@@ -84,11 +84,38 @@
         }
 
         .card + .card {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .card:hover {
             box-shadow: 0 12px 28px rgba(37,99,235,0.2);
+        }
+
+        /* PROJECT IMAGE */
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .project img:hover {
+            transform: scale(1.03);
+        }
+
+        .project a.button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .project a.button:hover {
+            background: #1e40af;
+            text-decoration: none;
         }
 
         /* SKILLS */
@@ -106,13 +133,6 @@
             padding: 8px 14px;
             border-radius: 20px;
             font-size: 0.9rem;
-        }
-
-        /* PROJECT LINKS */
-        .project a {
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: 500;
         }
 
         /* FOOTER */
@@ -166,9 +186,8 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am Lucky Jan S. Matre. I am currently a second-year level student taking the degree of Bachelor of Science in Information Technology with a specialization in Game Development. I am very enthusiastic and eager to acquire more knowledge on web development and how I can improve from the technical skills that I have. I am also very interested and passionate on how I can expand the knowledge that I have on technology.
-
-Besides academics, I enjoy cycling, going to the gym, as well as playing basketball, as these hobbies help me stay active and motivated while focusing on my free time. I am an outgoing person, enjoy helping others, and find it quite easy to work with them, making me comfortable to work with, both as an individual as well as part of a team.
+            I am an IT student passionate about web development and modern technologies.
+            I enjoy building clean and responsive websites and continuously improving my skills.
         </p>
     </div>
 </section>
@@ -192,15 +211,19 @@ Besides academics, I enjoy cycling, going to the gym, as well as playing basketb
     <h2>Projects</h2>
 
     <div class="card project">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website built using HTML and CSS.</p>
-        <a href="#">View on GitHub</a>
-    </div>
+        <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
+            <img src="https://via.placeholder.com/900x450?text=Portfolio+Project+Preview" alt="Portfolio Project Preview">
+        </a>
 
-    <div class="card project">
-        <h3>Real-Time Chat App</h3>
-        <p>A chat application developed using Node.js and Socket.io.</p>
-        <a href="#">View on GitHub</a>
+        <h3>Final Portfolio Project</h3>
+        <p>
+            A complete portfolio website showcasing my skills, projects, and contact information.
+            Built using HTML, CSS, and JavaScript.
+        </p>
+
+        <a class="button" href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
+            View Live Project
+        </a>
     </div>
 </section>
 
@@ -227,7 +250,7 @@ Besides academics, I enjoy cycling, going to the gym, as well as playing basketb
 </section>
 
 <section id="contact">
-    <h2>Let's Connect</h2>
+    <h2>Contact</h2>
     <div class="card">
         <p>
             📧 Email:
@@ -252,13 +275,7 @@ Besides academics, I enjoy cycling, going to the gym, as well as playing basketb
 
 <footer>
     <p>© 2026 Lucky Jan Matre. All Rights Reserved.</p>
-    <p>
-        <a href="#">GitHub</a> |
-        <a href="#">LinkedIn</a>
-    </p>
 </footer>
 
 </body>
 </html>
-
-
