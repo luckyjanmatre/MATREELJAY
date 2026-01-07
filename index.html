@@ -128,3 +128,194 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
+
+        p:hover,
+        h3:hover,
+        li:hover {
+            background: var(--hover-blue);
+        }
+
+        /* ===== SKILLS ===== */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background: #e0e7ff;
+            color: #1e40af;
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .skills li:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        /* ===== PROJECTS ===== */
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .project a:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* ===== LISTS ===== */
+        ul.standard {
+            padding-left: 20px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact p {
+            cursor: pointer;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--secondary);
+            color: #cbd5f5;
+            text-align: center;
+            padding: 25px 10%;
+        }
+
+        footer p,
+        footer a {
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        footer p:hover,
+        footer a:hover {
+            background: var(--hover-blue);
+            color: #1e40af;
+            transition: 0.3s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 6%;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Lucky Jan Matre</h1>
+    <p>Aspiring Web Developer | IT Student</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am an IT student passionate about web development and modern technologies.
+            I enjoy creating responsive interfaces and solving real-world problems.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card project">
+        <h3>Portfolio Website</h3>
+        <p>
+            A responsive portfolio website showcasing my projects and skills.
+        </p>
+        <a href="#">View on GitHub →</a>
+    </div>
+
+    <div class="card project">
+        <h3>Real-Time Chat App</h3>
+        <p>
+            A real-time chat application using Node.js and Socket.io.
+        </p>
+        <a href="#">View on GitHub →</a>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+        <ul class="standard">
+            <li>Google IT Support Professional Certificate</li>
+            <li>Web Development Bootcamp – Coursera</li>
+            <li>AWS Cloud Practitioner</li>
+        </ul>
+    </div>
+</section>
+
+<section id="activities">
+    <h2>Extracurricular Activities</h2>
+    <div class="card">
+        <ul class="standard">
+            <li>Member of Coding Club – Hackathon Organizer</li>
+            <li>IT Support Volunteer for University Events</li>
+            <li>Programming Competition Participant</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>GitHub: github.com/username</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Lucky Jan Matre. All Rights Reserved.</p>
+    <p>
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </p>
+</footer>
+
+</body>
+</html>
