@@ -12,10 +12,10 @@
         :root {
             --primary: #2563eb;
             --secondary: #1e293b;
-            --bg: #f8fafc;
             --card: #ffffff;
             --text: #334155;
             --hover-blue: #e0f2ff;
+            --page-bg: linear-gradient(180deg, #eaf4ff, #f8fbff);
         }
 
         * {
@@ -25,7 +25,7 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: var(--bg);
+            background: var(--page-bg);
             color: var(--text);
             line-height: 1.7;
         }
@@ -46,9 +46,9 @@
         header h1,
         header p,
         nav a {
+            padding: 6px 12px;
+            border-radius: 8px;
             display: inline-block;
-            padding: 6px 10px;
-            border-radius: 6px;
         }
 
         header h1:hover,
@@ -72,14 +72,14 @@
         /* ===== SECTIONS ===== */
         section {
             max-width: 1100px;
-            margin: auto;
+            margin: 40px auto;
             padding: 60px 10%;
-            border-radius: 18px;
-            transition: background 0.3s;
+            border-radius: 24px;
+            transition: background 0.3s ease;
         }
 
         section:hover {
-            background: var(--hover-blue);
+            background: rgba(224, 242, 255, 0.6);
         }
 
         section h2 {
@@ -88,7 +88,7 @@
             position: relative;
             display: inline-block;
             padding: 6px 12px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         section h2:hover {
@@ -110,8 +110,8 @@
         .card {
             background: var(--card);
             padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             margin-bottom: 25px;
             transition: all 0.3s ease;
         }
@@ -119,14 +119,14 @@
         .card:hover {
             background: var(--hover-blue);
             transform: translateY(-6px);
-            box-shadow: 0 20px 45px rgba(37,99,235,0.25);
+            box-shadow: 0 25px 50px rgba(37,99,235,0.25);
         }
 
         /* ===== TEXT HOVER ===== */
         p, h3, li {
             padding: 6px 10px;
             border-radius: 8px;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         p:hover,
@@ -147,7 +147,7 @@
         .skills li {
             background: #e0e7ff;
             color: #1e40af;
-            padding: 10px 16px;
+            padding: 10px 18px;
             border-radius: 999px;
             font-size: 0.9rem;
             font-weight: 500;
@@ -157,15 +157,15 @@
         .skills li:hover {
             background: var(--primary);
             color: #fff;
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
-        /* ===== PROJECTS ===== */
+        /* ===== PROJECT LINKS ===== */
         .project a {
             display: inline-block;
             margin-top: 10px;
-            padding: 6px 12px;
-            border-radius: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
         }
 
         .project a:hover {
@@ -173,35 +173,25 @@
             color: #fff;
         }
 
-        /* ===== LISTS ===== */
-        ul.standard {
-            padding-left: 20px;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact p {
-            cursor: pointer;
-        }
-
         /* ===== FOOTER ===== */
         footer {
             background: var(--secondary);
             color: #cbd5f5;
             text-align: center;
-            padding: 25px 10%;
+            padding: 30px 10%;
+            margin-top: 60px;
         }
 
         footer p,
         footer a {
             padding: 6px 10px;
-            border-radius: 6px;
+            border-radius: 8px;
         }
 
         footer p:hover,
         footer a:hover {
             background: var(--hover-blue);
             color: #1e40af;
-            transition: 0.3s;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -238,7 +228,7 @@
     <div class="card">
         <p>
             I am an IT student passionate about web development and modern technologies.
-            I enjoy creating responsive interfaces and solving real-world problems.
+            I enjoy building clean, responsive interfaces and solving real-world problems.
         </p>
     </div>
 </section>
@@ -263,17 +253,13 @@
 
     <div class="card project">
         <h3>Portfolio Website</h3>
-        <p>
-            A responsive portfolio website showcasing my projects and skills.
-        </p>
+        <p>A responsive portfolio website showcasing my skills and projects.</p>
         <a href="#">View on GitHub →</a>
     </div>
 
     <div class="card project">
         <h3>Real-Time Chat App</h3>
-        <p>
-            A real-time chat application using Node.js and Socket.io.
-        </p>
+        <p>A real-time chat application using Node.js and Socket.io.</p>
         <a href="#">View on GitHub →</a>
     </div>
 </section>
@@ -281,7 +267,7 @@
 <section id="certifications">
     <h2>Certifications</h2>
     <div class="card">
-        <ul class="standard">
+        <ul>
             <li>Google IT Support Professional Certificate</li>
             <li>Web Development Bootcamp – Coursera</li>
             <li>AWS Cloud Practitioner</li>
@@ -292,21 +278,20 @@
 <section id="activities">
     <h2>Extracurricular Activities</h2>
     <div class="card">
-        <ul class="standard">
+        <ul>
             <li>Member of Coding Club – Hackathon Organizer</li>
-            <li>IT Support Volunteer for University Events</li>
+            <li>IT Support Volunteer</li>
             <li>Programming Competition Participant</li>
         </ul>
     </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
     <h2>Contact</h2>
     <div class="card">
-        <p>Email: ljmatre15@gmail.com</p>
-        <p>Facebook: Lj Matre </p>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
         <p>GitHub: github.com/username</p>
-         <p>Instagaram: eljaymx</p>
     </div>
 </section>
 
@@ -320,4 +305,3 @@
 
 </body>
 </html>
-
