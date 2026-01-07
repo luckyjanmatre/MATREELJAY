@@ -15,6 +15,7 @@
             --bg: #f8fafc;
             --card: #ffffff;
             --text: #334155;
+            --hover-blue: #e0f2ff;
         }
 
         * {
@@ -34,11 +35,7 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
+        /* ===== HEADER ===== */
         header {
             background: linear-gradient(135deg, #2563eb, #1e40af);
             color: #fff;
@@ -46,14 +43,20 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        header h1,
+        header p,
+        nav a {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 6px;
         }
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+        header h1:hover,
+        header p:hover,
+        nav a:hover {
+            background: var(--hover-blue);
+            color: #1e40af;
+            transition: 0.3s;
         }
 
         nav {
@@ -61,26 +64,35 @@
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 500;
             color: #e0e7ff;
         }
 
-        nav a:hover {
-            color: #fff;
-        }
-
-        /* Sections */
+        /* ===== SECTIONS ===== */
         section {
             max-width: 1100px;
             margin: auto;
             padding: 60px 10%;
+            border-radius: 18px;
+            transition: background 0.3s;
+        }
+
+        section:hover {
+            background: var(--hover-blue);
         }
 
         section h2 {
             font-size: 2rem;
             margin-bottom: 30px;
             position: relative;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
+        section h2:hover {
+            background: var(--hover-blue);
         }
 
         section h2::after {
@@ -94,25 +106,25 @@
             border-radius: 5px;
         }
 
-        /* Cards */
+        /* ===== CARD ===== */
         .card {
             background: var(--card);
             padding: 25px;
-            border-radius: 14px;
+            border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             margin-bottom: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            background: var(--hover-blue);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(37,99,235,0.25);
         }
 
-        /* Skills */
-        .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 0;
-            list
+        /* ===== TEXT HOVER ===== */
+        p, h3, li {
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
