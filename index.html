@@ -10,9 +10,9 @@
 
     <style>
         :root {
-            --primary: #8b5cf6;     /* Light Purple */
-            --dark: #4c1d95;        /* Deep Purple */
-            --light-bg: #f5f3ff;    /* Light Lavender */
+            --primary: #8b5cf6;
+            --dark: #4c1d95;
+            --light-bg: #f5f3ff;
             --card-bg: #ffffff;
             --text: #4b5563;
         }
@@ -51,15 +51,10 @@
             font-size: 2.2rem;
         }
 
-        header p {
-            margin: 10px 0 20px;
-            font-size: 1rem;
-        }
-
         nav a {
             margin: 0 12px;
-            font-weight: 500;
             color: #fff;
+            font-weight: 500;
         }
 
         /* SECTIONS */
@@ -70,7 +65,6 @@
         }
 
         section h2 {
-            margin-bottom: 15px;
             font-size: 1.8rem;
             color: var(--dark);
         }
@@ -81,40 +75,30 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .card + .card {
-            margin-top: 25px;
+        .clickable-card {
+            cursor: pointer;
         }
 
-        .card:hover {
+        .clickable-card:hover {
             box-shadow: 0 12px 28px rgba(139, 92, 246, 0.25);
+            transform: translateY(-4px);
         }
 
-        /* PROJECT IMAGE */
-        .project img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .project img:hover {
-            transform: scale(1.03);
-        }
-
-        .project a.button {
+        /* BUTTON */
+        .button {
             display: inline-block;
-            margin-top: 10px;
-            padding: 8px 14px;
+            margin-top: 15px;
+            padding: 10px 16px;
             background: var(--primary);
             color: #fff;
             border-radius: 6px;
             font-weight: 500;
         }
 
-        .project a.button:hover {
+        .button:hover {
             background: #6d28d9;
             text-decoration: none;
         }
@@ -145,24 +129,9 @@
             margin-top: 60px;
         }
 
-        footer a {
-            color: #e9d5ff;
-            margin: 0 8px;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 8px;
             }
         }
     </style>
@@ -177,8 +146,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#activities">Activities</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -187,10 +154,9 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am Lucky Jan S. Matre. I am currently a second-year level student taking the degree of Bachelor of Science in Information Technology with a specialization in Game Development. 
-            I am very enthusiastic and eager to acquire more knowledge on web development and how I can improve from the technical skills that I have. 
-            I am also very interested and passionate on how I can expand the knowledge that | have on technology. Besides academics, I enjoy cycling, going to the gym, as well as playing basketball, as these hobbies help me stay active and motivated while focusing on my free time.
-            I am an outgoing person, enjoy helping others, and find it quite easy to work with them, making me comfortable to work with, both as an individual as well as part of a team.
+            I am Lucky Jan S. Matre, a second-year Bachelor of Science in Information Technology
+            student specializing in Game Development. I am passionate about web development
+            and improving my technical skills while working independently or in a team.
         </p>
     </div>
 </section>
@@ -213,66 +179,43 @@
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card project">
-        <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
-            <img src="https://via.placeholder.com/900x450?text=Portfolio+Project+Preview" alt="Portfolio Project Preview">
-        </a>
+    <!-- ENTIRE CARD CLICKABLE -->
+    <a href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
+        <div class="card clickable-card project">
+            <h3>Personal IT Portfolio Website</h3>
 
-        <h3>Final Portfolio Project</h3>
-        <p>
-            A complete portfolio website showcasing my skills, projects, and contact information.
-            Built using HTML, CSS, and JavaScript.
-        </p>
+            <p>
+                A personal IT portfolio website created to showcase my background, technical
+                skills, projects, certifications, and contact information in a modern layout.
+            </p>
 
-        <a class="button" href="https://luckyjanmatre.github.io/FinalProject_Portfolioo/" target="_blank">
-            View Live Project
-        </a>
-    </div>
-</section>
+            <p>
+                Designed with a light purple theme and responsive layout to ensure accessibility
+                across devices.
+            </p>
 
-<section id="certifications">
-    <h2>Certifications</h2>
-    <div class="card">
-        <ul>
-            <li>Google IT Support Professional Certificate</li>
-            <li>Web Development Bootcamp – Coursera</li>
-            <li>AWS Cloud Practitioner</li>
-        </ul>
-    </div>
-</section>
+            <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
 
-<section id="activities">
-    <h2>Extracurricular Activities</h2>
-    <div class="card">
-        <ul>
-            <li>Member of Coding Club</li>
-            <li>IT Support Volunteer</li>
-            <li>Programming Competition Participant</li>
-        </ul>
-    </div>
+            <!-- CLEAR BUTTON -->
+            <span class="button">View Live Project</span>
+
+            <!-- VISIBLE LINK -->
+            <p style="margin-top:10px; font-size:0.9rem;">
+                🔗 Live URL:
+                <strong>
+                    https://luckyjanmatre.github.io/FinalProject_Portfolioo/
+                </strong>
+            </p>
+        </div>
+    </a>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-        <p>
-            📧 Email:
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ljmatre15@gmail.com" target="_blank">
-                ljmatre15@gmail.com
-            </a>
-        </p>
-        <p>
-            📘 Facebook:
-            <a href="https://web.facebook.com/lj.matre.73" target="_blank">
-                Lj Matre
-            </a>
-        </p>
-        <p>
-            📸 Instagram:
-            <a href="https://www.instagram.com/eljaymx/" target="_blank">
-                @eljaymx
-            </a>
-        </p>
+        <p>📧 Email: <a href="mailto:ljmatre15@gmail.com">ljmatre15@gmail.com</a></p>
+        <p>📘 Facebook: <a href="https://web.facebook.com/lj.matre.73" target="_blank">Lj Matre</a></p>
+        <p>📸 Instagram: <a href="https://www.instagram.com/eljaymx/" target="_blank">@eljaymx</a></p>
     </div>
 </section>
 
