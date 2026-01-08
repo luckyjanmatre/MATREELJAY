@@ -1,20 +1,17 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lucky Jan Matre | IT Portfolio</title>
+    <title>Your Name | IT Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #8b5cf6;
-            --dark: #4c1d95;
-            --light-bg: #f5f3ff;
-            --card-bg: #ffffff;
-            --text: #4b5563;
+            --primary: #6a0dad;
+            --secondary: #9b5de5;
+            --dark: #1e1e2f;
+            --light: #f6f4fb;
+            --white: #ffffff;
         }
 
         * {
@@ -22,199 +19,264 @@
         }
 
         body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: var(--light-bg);
-            color: var(--text);
+            background: var(--light);
+            color: #333;
             line-height: 1.6;
         }
 
         a {
-            color: var(--primary);
             text-decoration: none;
+            color: var(--primary);
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* HEADER */
+        /* Header */
         header {
-            background: var(--primary);
-            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 60px 10%;
             text-align: center;
-            padding: 50px 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        header p {
-            margin: 10px 0 20px;
-            font-size: 1rem;
+        nav {
+            margin-top: 20px;
         }
 
         nav a {
             margin: 0 12px;
-            font-weight: 500;
-            color: #fff;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
         }
 
-        /* SECTIONS */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
         section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            padding: 60px 10%;
+            max-width: 1100px;
+            margin: auto;
         }
 
         section h2 {
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            color: var(--dark);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            position: relative;
         }
 
-        /* CARD */
-        .card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        section h2::after {
+            content: "";
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 32px rgba(139, 92, 246, 0.35);
-        }
-
-        /* PROJECT CARD */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .project h3 {
-            margin-top: 0;
-            color: var(--dark);
-        }
-
-        .project p {
-            font-size: 0.95rem;
-        }
-
-        .project .button {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 16px;
-            background: var(--primary);
-            color: #fff;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        .project .button:hover {
-            background: #6d28d9;
-            text-decoration: none;
-        }
-
-        /* SKILLS */
+        /* Skills */
         .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
             list-style: none;
             padding: 0;
         }
 
         .skills li {
-            background: #ede9fe;
-            color: #5b21b6;
-            padding: 8px 14px;
-            border-radius: 20px;
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 16px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 25px;
             font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        /* FOOTER */
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        /* Lists */
+        .certifications ul,
+        .activities ul {
+            padding-left: 20px;
+        }
+
+        .certifications li,
+        .activities li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
         footer {
             background: var(--dark);
-            color: #e9d5ff;
+            color: var(--white);
             text-align: center;
-            padding: 20px;
-            margin-top: 60px;
+            padding: 30px 10%;
         }
 
         footer a {
-            color: #e9d5ff;
+            color: var(--secondary);
+            margin: 0 10px;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Lucky Jan Matre</h1>
-    <p>Aspiring Web Developer | IT Student</p>
+    <h1>Your Name</h1>
+    <p>IT Student | Aspiring Web Developer</p>
     <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#activities">Activities</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <section id="about">
     <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am Lucky Jan S. Matre, a second-year BSIT student specializing in Game Development.
-            I am passionate about web development and continuously improving my technical skills.
-        </p>
-    </div>
+    <p>
+        I am an IT student passionate about web development and modern UI design.
+        I enjoy building responsive websites, interactive projects, and continuously
+        improving my technical skills.
+    </p>
 </section>
 
 <section id="skills" class="skills">
     <h2>Skills</h2>
-    <div class="card">
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Git & GitHub</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-    </div>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+        <li>React</li>
+        <li>Node.js</li>
+    </ul>
 </section>
 
-<!-- PROJECTS SECTION -->
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="projects-grid">
+    <div class="projects">
 
-        <!-- PORTFOLIO PROJECT CARD -->
-        <div class="card project">
-            <a href="https://luckyjanmatre.github.io/portfolio/" target="_blank">
-                <img src="https://via.placeholder.com/600x350?text=Personal+Portfolio" alt="Portfolio Website">
-            </a>
-            <h3>Personal Portfolio Website</h3>
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
             <p>
-                A modern and responsive portfolio showcasing my skills, projects, and contact
-                information. Built using HTML and CSS and deployed via GitHub Pages.
+                A responsive portfolio website showcasing my skills, projects, and achievements.
             </p>
+            <a class="btn" href="https://luckyjanmatre.github.io/portfolio/" target="_blank">
+                View Project
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>RUSH Game</h3>
+            <p>
+                An interactive web-based game developed using HTML, CSS, and JavaScript.
+            </p>
+            <a class="btn" href="https://luckyjanmatre.github.io/RUSH/" target="_blank">
+                Play Game
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Google IT Support Professional Certificate</li>
+        <li>Web Development Bootcamp – Coursera</li>
+        <li>AWS Cloud Practitioner</li>
+    </ul>
+</section>
+
+<section id="activities" class="activities">
+    <h2>Extracurricular Activities</h2>
+    <ul>
+        <li>Member of Coding Club – Organized hackathons</li>
+        <li>Volunteer IT Support for university events</li>
+        <li>Participant in programming competitions</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="#">github.com/username</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Your Name | All Rights Reserved</p>
+    <p>
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </p>
+</footer>
+
+</body>
+</html>
