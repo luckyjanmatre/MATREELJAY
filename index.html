@@ -28,6 +28,7 @@ body {
     color: #333;
     line-height: 1.6;
     transition: background 0.5s ease;
+    overflow-x: hidden;
 }
 
 /* Links */
@@ -43,20 +44,30 @@ header {
     padding: 80px 10%;
     text-align: center;
     clip-path: ellipse(100% 100% at 50% 0%);
+    overflow: hidden;
 }
 
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     text-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease;
 }
 
 header p {
     font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.8s ease 0.2s;
 }
 
 nav {
     margin-top: 25px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.8s ease 0.4s;
 }
 
 nav a {
@@ -82,6 +93,13 @@ section {
     margin-right: auto;
     transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
     box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section:hover {
@@ -184,20 +202,17 @@ section h2::after {
 }
 
 /* Lists */
-.certifications ul,
-.activities ul {
+.certifications ul {
     padding-left: 20px;
 }
 
-.certifications li,
-.activities li {
+.certifications li {
     margin-bottom: 12px;
     font-weight: 500;
     transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.certifications li:hover,
-.activities li:hover {
+.certifications li:hover {
     transform: translateX(8px);
     color: var(--tertiary);
 }
@@ -239,23 +254,21 @@ footer a:hover {
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
-        <a href="#activities">Activities</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section id="about">
+<section id="about" class="reveal">
     <h2>About Me</h2>
     <p>
-        1 am Lucky Jan S. Matre. I am currently a second-year level student taking the degree of Bachelor of Science in Information Technology with a specialization in Game Development. 
-        I am very enthusiastic and eager to acquire more knowledge on web development and how I can improve from the technical skills that I have. 
-        I am also very interested and passionate on how I can expand the knowledge that | have on technology. Besides academics, 
+        I am Lucky Jan S. Matre. I am currently a second-year level student taking the degree of Bachelor of Science in Information Technology with a specialization in Game Development. 
+        am very enthusiastic and eager to acquire more knowledge on web development and how I can improve from the technical skills that I have. 
+        I am also very interested and passionate on how I can expand the knowledge that | have on technology. Besides academics,
         I enjoy cycling, going to the gym, as well as playing basketball, as these hobbies help me stay active and motivated while focusing on my free time.
-        I am an outgoing person, enjoy helping others, and find it quite easy to work with them, making me comfortable to work with, both as an individual as well as part of a team.
-    </p>
+        I am an outgoing person, enjoy helping others, and find it quite easy to work with them, making me comfortable to work with, both as an individual as well as part of a team.</p>
 </section>
 
-<section id="skills" class="skills">
+<section id="skills" class="skills reveal">
     <h2>Skills</h2>
     <ul>
         <li>HTML</li>
@@ -268,7 +281,7 @@ footer a:hover {
     </ul>
 </section>
 
-<section id="projects">
+<section id="projects" class="reveal">
     <h2>Projects</h2>
     <div class="projects">
         <div class="project-card">
@@ -284,7 +297,7 @@ footer a:hover {
     </div>
 </section>
 
-<section id="certifications" class="certifications">
+<section id="certifications" class="certifications reveal">
     <h2>Certifications</h2>
     <ul>
         <li>Google IT Support Professional Certificate</li>
@@ -293,16 +306,7 @@ footer a:hover {
     </ul>
 </section>
 
-<section id="activities" class="activities">
-    <h2>Extracurricular Activities</h2>
-    <ul>
-        <li>Member of Coding Club – Organized hackathons</li>
-        <li>Volunteer IT Support for university events</li>
-        <li>Participant in programming competitions</li>
-    </ul>
-</section>
-
-<section id="contact">
+<section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>Email: your.email@example.com</p>
     <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
@@ -317,6 +321,27 @@ footer a:hover {
     </p>
 </footer>
 
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+
+function reveal() {
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if(elementTop < windowHeight - revealPoint){
+            reveals[i].classList.add('visible');
+        } else {
+            reveals[i].classList.remove('visible');
+        }
+    }
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+</script>
+
 </body>
 </html>
-
