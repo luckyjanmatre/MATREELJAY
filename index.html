@@ -14,6 +14,7 @@
     --light: #f6f4fb;
     --white: #ffffff;
     --shadow: rgba(0, 0, 0, 0.1);
+    --background: #4b0082; /* New purple background */
 }
 
 * {
@@ -24,8 +25,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: var(--light);
-    color: #333;
+    background: var(--background);
+    color: #f6f4fb; /* lighter text for purple background */
     line-height: 1.6;
     scroll-behavior: smooth;
 }
@@ -116,12 +117,15 @@ section {
     padding: 80px 10%;
     max-width: 1100px;
     margin: auto;
+    background: rgba(255,255,255,0.05); /* subtle contrast on purple */
+    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary);
+    color: var(--accent);
     position: relative;
 }
 
@@ -172,13 +176,14 @@ section h2::after {
 }
 
 .project-card {
-    background: var(--white);
+    background: rgba(255,255,255,0.1); /* subtle transparent card */
     padding: 30px 25px;
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    color: #fff;
 }
 
 .project-card::before {
@@ -209,14 +214,14 @@ section h2::after {
 
 .project-card h3 {
     margin-top: 0;
-    color: var(--primary);
+    color: var(--accent);
     font-size: 1.5rem;
 }
 
 .project-card p {
     font-size: 1rem;
     margin-top: 10px;
-    color: #555;
+    color: #eee;
 }
 
 /* Buttons */
@@ -241,12 +246,12 @@ section h2::after {
 
 /* Contact Section */
 #contact p a {
-    color: var(--primary);
+    color: var(--accent);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #contact p a:hover {
-    color: var(--accent);
+    color: var(--secondary);
     transform: scale(1.1);
 }
 
