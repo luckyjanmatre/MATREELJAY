@@ -202,17 +202,20 @@ section h2::after {
 }
 
 /* Lists */
-.certifications ul {
+.certifications ul,
+.activities ul {
     padding-left: 20px;
 }
 
-.certifications li {
+.certifications li,
+.activities li {
     margin-bottom: 12px;
     font-weight: 500;
     transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.certifications li:hover {
+.certifications li:hover,
+.activities li:hover {
     transform: translateX(8px);
     color: var(--tertiary);
 }
@@ -306,6 +309,15 @@ footer a:hover {
     </ul>
 </section>
 
+<section id="activities" class="activities reveal">
+    <h2>Extracurricular Activities</h2>
+    <ul>
+        <li>Member of Coding Club – Organized hackathons</li>
+        <li>Volunteer IT Support for university events</li>
+        <li>Participant in programming competitions</li>
+    </ul>
+</section>
+
 <section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>Email: your.email@example.com</p>
@@ -345,4 +357,3 @@ window.addEventListener('load', reveal);
 
 </body>
 </html>
-
